@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel Parade: Color Blast</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 520px; margin: 0 auto; padding: 48px 18px; line-height: 1.6; color: #222; background: #fff; text-align: center; }
+  h1 { font-size: 1.5em; }
+  a.btn { display: block; margin: 12px auto; padding: 14px 18px; max-width: 280px; border-radius: 12px; background: #4b3fd1; color: #fff; text-decoration: none; font-weight: 600; }
+  .muted { color: #666; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<!-- Kullanıcı sitesinin (enesustundag.github.io) kök 404 sayfası. Oyun yüklü değilken https://enesustundag.github.io/pixelparade/gift/<KOD>
+     bağlantısı buraya düşer: oyuncuyu mağazaya yollar. Oyun yüklüyse bağlantı doğrudan oyunu açar (App Link / Universal Link). -->
+<div id="gift" hidden>
+  <h1>A gift is waiting for you!</h1>
+  <p>Install <strong>Pixel Parade: Color Blast</strong>, then tap the link again to open your gift.</p>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.kruxgen.pixelparade">Get it for Android</a>
+  <a class="btn" href="https://apps.apple.com/app/id6835425825">Get it for iPhone and iPad</a>
+  <p class="muted">Already installed? <a id="open" href="#">Open the game</a></p>
+</div>
+<div id="nf">
+  <h1>Page not found</h1>
+  <p><a href="/pixelparade-privacy/">Pixel Parade: Color Blast</a></p>
+</div>
+<script>
+  (function () {
+    var m = location.pathname.match(/^\/pixelparade\/gift\/([A-Za-z0-9_-]{1,32})\/?$/);
+    if (!m) return;
+    document.getElementById('nf').hidden = true;
+    document.getElementById('gift').hidden = false;
+    document.getElementById('open').href = 'pixelparade://gift/' + m[1];
+  })();
+</script>
+</body>
+</html>

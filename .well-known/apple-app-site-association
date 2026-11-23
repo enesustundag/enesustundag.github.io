@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["9F3Y794882.com.kruxgen.pixelparade"],
+        "components": [
+          { "/": "/pixelparade/gift/*", "comment": "Kampanya hediye bağlantısı: /pixelparade/gift/<KOD>" }
+        ]
+      }
+    ]
+  }
+}
