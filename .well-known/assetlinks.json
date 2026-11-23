@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kruxgen.pixelparade",
+      "sha256_cert_fingerprints": [
+        "E8:A6:9A:8E:DB:46:24:FC:0C:CA:E0:03:02:5C:5B:C5:2D:BF:C8:8F:BD:EF:18:57:0E:4A:9F:76:84:B8:E7:58"
+      ]
+    }
+  }
+]
